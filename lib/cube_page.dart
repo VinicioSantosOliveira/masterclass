@@ -14,29 +14,52 @@ class CubePage extends StatelessWidget {
         width: double.infinity,
         height: double.infinity,
         child: Stack(
-          alignment: Alignment.center,
+          alignment: Alignment.bottomCenter,
           children: [
             Container(
-              width: 100,
-              height: 100,
-              color: Colors.yellow,
+              alignment: Alignment.topCenter,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Container(
+                    width: 200,
+                    height: 200,
+                    color: Colors.green,
+                  ),
+                  Container(
+                    width: 150,
+                    height: 150,
+                    color: Colors.yellow,
+                  ),
+                  Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(20)).copyWith(
+                        topLeft: const Radius.circular(99),
+                        topRight: const Radius.circular(50),
+                        bottomLeft: const Radius.circular(20),
+                        bottomRight: const Radius.circular(60),
+                      ),
+                      color: Colors.blueAccent,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.green,
-            ),
-            Container(
-              width: 100,
-              height: 100,
-              color: Colors.blue,
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: Align(
+                alignment: Alignment.bottomRight,
+                child: FloatingActionButton(
+                  onPressed: () {},
+                  child: const Icon(Icons.add),
+                ),
+              ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: const Icon(Icons.add),
       ),
     );
   }
