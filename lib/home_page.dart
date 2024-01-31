@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass/aula_miscelania.dart';
 import 'package:masterclass/implicit_animation.dart';
 
 class HomePage extends StatelessWidget {
@@ -28,6 +29,17 @@ class HomePage extends StatelessWidget {
                 );
               },
               icon: const Icon(Icons.animation),
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Miscelania(),
+                  ),
+                );
+              },
+              icon: const Icon(Icons.align_vertical_bottom_outlined),
             ),
           ],
         ),
