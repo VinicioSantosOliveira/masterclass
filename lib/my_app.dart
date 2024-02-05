@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:masterclass/aula_miscelania.dart';
 import 'home_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -6,8 +7,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/miscelania': (context) => const Miscelania(),
+      },
     );
   }
 }

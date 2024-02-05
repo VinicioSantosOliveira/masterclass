@@ -33,23 +33,7 @@ class HomePage extends StatelessWidget {
             ),
             IconButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const Miscelania(),
-                  ),
-                );
-              },
-              icon: const Icon(Icons.align_vertical_bottom_outlined),
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const CardTextWidget(),
-                  ),
-                );
+                Navigator.of(context).pushNamed('/miscelania');
               },
               icon: const Icon(Icons.add),
             ),
@@ -58,6 +42,7 @@ class HomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
+        backgroundColor: Colors.amberAccent,
         child: const Icon(Icons.add),
       ),
     );
