@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass/card_text_widget.dart';
-import 'package:masterclass/aula_miscelania.dart';
 import 'package:masterclass/implicit_animation.dart';
 
 class HomePage extends StatelessWidget {
@@ -32,10 +30,14 @@ class HomePage extends StatelessWidget {
               icon: const Icon(Icons.animation),
             ),
             IconButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed('/miscelania');
+              onPressed: () async {
+                debugPrint('navegou para outra tela');
+                final value =
+                    await Navigator.of(context).pushNamed('/miscelania');
+                debugPrint('chegando');
+                debugPrint('$value');
               },
-              icon: const Icon(Icons.add),
+              icon: const Icon(Icons.ballot_sharp),
             ),
           ],
         ),

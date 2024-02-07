@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:masterclass/aula_miscelania.dart';
+import 'package:masterclass/cube_page.dart';
 import 'home_page.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,10 +9,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      //initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
         '/miscelania': (context) => const Miscelania(),
+        '/cube': (context) => const CubePage(),
       },
     );
   }

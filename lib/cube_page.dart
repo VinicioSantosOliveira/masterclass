@@ -58,6 +58,15 @@ class CubePage extends StatelessWidget {
                 ),
               ),
             ),
+            Center(
+              child: ElevatedButton(
+                onPressed: () {
+                  //Navigator.of(context).popUntil((route) => route.settings.name == '/');
+                  Navigator.of(context).popUntil(ModalRoute.withName('/'));
+                },
+                child: const Text('Pop'),
+              ),
+            ),
           ],
         ),
       ),
