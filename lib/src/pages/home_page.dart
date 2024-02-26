@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass/implicit_animation.dart';
+import 'package:masterclass/src/pages/implicit_animation_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

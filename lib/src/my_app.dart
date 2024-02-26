@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:masterclass/aula_miscelania.dart';
-import 'package:masterclass/cube_page.dart';
-import 'home_page.dart';
+import 'package:masterclass/src/pages/aula_miscelania_page.dart';
+import 'package:masterclass/src/pages/cube_page.dart';
+import 'pages/home_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
