@@ -39,6 +39,12 @@ class HomePage extends StatelessWidget {
               },
               icon: const Icon(Icons.ballot_sharp),
             ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/bmi');
+              },
+              child: const Text('BMI'),
+            ),
           ],
         ),
       ),
