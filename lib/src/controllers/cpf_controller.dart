@@ -10,7 +10,7 @@ class CpfController extends ChangeNotifier {
     cpf = text;
   }
 
-  validate() {
+  void validate() {
     final cpfModel = CpfModel(cpf);
 
     if (cpfModel.isValid() == true) {
@@ -22,6 +22,4 @@ class CpfController extends ChangeNotifier {
     }
     notifyListeners();
   }
-
-  void resultado() {}
 }
