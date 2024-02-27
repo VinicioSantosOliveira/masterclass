@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 251, 0, 0),
-        title: const Text('Home Page'),
+        title: const Text('Masterclass'),
       ),
       body: SizedBox(
         height: double.infinity,
@@ -17,8 +17,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const Text('Masterclass'),
-            IconButton(
+            TextButton(
               onPressed: () {
                 Navigator.push(
                   context,
@@ -27,9 +26,9 @@ class HomePage extends StatelessWidget {
                   ),
                 );
               },
-              icon: const Icon(Icons.animation),
+              child: const Text('ImplicitAnimationPage'),
             ),
-            IconButton(
+            TextButton(
               onPressed: () async {
                 debugPrint('navegou para outra tela');
                 final value =
@@ -37,13 +36,19 @@ class HomePage extends StatelessWidget {
                 debugPrint('chegando');
                 debugPrint('$value');
               },
-              icon: const Icon(Icons.ballot_sharp),
+              child: const Text('Miscelania'),
             ),
             TextButton(
               onPressed: () {
                 Navigator.of(context).pushNamed('/bmi');
               },
               child: const Text('BMI'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/cpf');
+              },
+              child: const Text('Cpf'),
             ),
           ],
         ),
