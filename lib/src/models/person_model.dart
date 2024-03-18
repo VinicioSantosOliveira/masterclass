@@ -8,7 +8,8 @@ class PersonModel {
   PersonModel({
     required this.weight,
     required this.height,
-  });
+  })  : assert(weight >= 0, 'weight nao pode ser menor que zero'),
+        assert(height >= 0, 'height nao pode ser menor que zero');
 
   factory PersonModel.empty() => PersonModel(height: 0.0, weight: 0.0);
 

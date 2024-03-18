@@ -1,7 +1,7 @@
 class CpfModel {
   final String value;
 
-  CpfModel(this.value);
+  CpfModel(this.value) : assert(value.length == 11, 'Deve conter 11 digitos');
 
   int _generateResultByDigit(int decrementValue) {
     final numbers = value.split('').map((e) => int.parse(e)).toList();
