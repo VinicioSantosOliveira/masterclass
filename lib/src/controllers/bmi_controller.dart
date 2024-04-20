@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/person_model.dart';
 
 class BmiController extends ChangeNotifier {
-  //Regra de negócio da view consumino a regra de negócio da PersonModel()
+  //Regra de negócio da view consumindo a regra de negócio da PersonModel()
   var result = 'Resultado';
   var _model = PersonModel.empty();
   var _weight = 0.0;

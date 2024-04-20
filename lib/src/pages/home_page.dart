@@ -31,8 +31,7 @@ class HomePage extends StatelessWidget {
             TextButton(
               onPressed: () async {
                 debugPrint('navegou para outra tela');
-                final value =
-                    await Navigator.of(context).pushNamed('/miscelania');
+                final value = await Navigator.of(context).pushNamed('/miscelania');
                 debugPrint('chegando');
                 debugPrint('$value');
               },
@@ -49,6 +48,12 @@ class HomePage extends StatelessWidget {
                 Navigator.of(context).pushNamed('/cpf');
               },
               child: const Text('Cpf'),
+            ),
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed('/gerenciamento');
+              },
+              child: const Text('Gerenciamento de estado'),
             ),
           ],
         ),
